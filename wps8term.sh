@@ -11,15 +11,9 @@
 
 # usage: wps8term.sh wps.ini
 
-FG=black
-BG=white
-FONT=9x15
-BFONT=9x15
-COLS=80
- 
-xterm   -ti vt52 -title "wps8term" -sb -sl 1000 \
-        -geo ${COLS}x24 -fg ${FG} -bg ${BG} \
-        -cr blue -fn ${FONT} -fb ${BFONT} -xrm \
+xterm   -ti vt52 -title "wps8term" \
+        -geo 80x24 -fg green -bg black \
+        -cr green -fa 'Glass TTY VT220' -fs 15 -xrm \
         'XTerm*VT100.translations: #override \n \
         ~Shift  <Key>F5:        string("Break") \n \
         ~Shift  <Key>F6:        string(0x1b)    string("?q") \n \
